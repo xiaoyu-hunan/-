@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>制药过程安全与环保知识库</title>
+    <meta name="description" content="专业的制药过程安全与环保知识分享平台，涵盖GMP、EPA、OSHA等法规标准">
+    <meta name="keywords" content="制药安全,环保,GMP,EPA,OSHA,工艺安全,化学品管理">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/images/logo.png" alt="制药安全知识库" class="logo">
+                <span class="logo-text">制药安全知识库</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#safety" class="nav-link">安全知识 <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="content/safety/process-safety.html">工艺安全</a></li>
+                        <li><a href="content/safety/chemical-hazards.html">化学品危害</a></li>
+                        <li><a href="content/safety/equipment-safety.html">设备安全</a></li>
+                        <li><a href="content/safety/personal-protection.html">个人防护</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#environment" class="nav-link">环保知识 <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="content/environment/waste-management.html">废物管理</a></li>
+                        <li><a href="content/environment/emissions-control.html">排放控制</a></li>
+                        <li><a href="content/environment/green-chemistry.html">绿色化学</a></li>
+                        <li><a href="content/environment/regulations.html">环保法规</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#regulations" class="nav-link">法规标准 <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="content/regulations/gmp-requirements.html">GMP要求</a></li>
+                        <li><a href="content/regulations/epa-regulations.html">EPA法规</a></li>
+                        <li><a href="content/regulations/osha-standards.html">OSHA标准</a></li>
+                        <li><a href="content/regulations/international-standards.html">国际标准</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#case-studies" class="nav-link">案例研究 <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="content/case-studies/incident-analysis.html">事故分析</a></li>
+                        <li><a href="content/case-studies/best-practices.html">最佳实践</a></li>
+                        <li><a href="content/case-studies/technology-reviews.html">技术评估</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#resources" class="nav-link">学习资源</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 英雄区域 -->
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">制药过程安全与环保知识库</h1>
+                    <p class="hero-subtitle">专业的制药行业安全与环保知识分享平台</p>
+                    <p class="hero-description">
+                        涵盖GMP、EPA、OSHA等国际标准，提供工艺安全、化学品管理、废物处理等专业知识，
+                        助力制药企业实现安全生产和可持续发展。
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#safety" class="btn btn-primary">开始学习</a>
+                        <a href="#resources" class="btn btn-secondary">查看资源</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/diagrams/pharma-safety-overview.png" alt="制药安全概览" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- 搜索区域 -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="搜索安全知识、法规标准、案例研究..." class="search-input">
+                    <button class="search-btn" onclick="performSearch()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div id="searchResults" class="search-results"></div>
+            </div>
+        </section>
+
+        <!-- 知识分类 -->
+        <section class="knowledge-categories">
+            <div class="container">
+                <h2 class="section-title">知识分类</h2>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>安全知识</h3>
+                        <p>工艺安全、化学品危害、设备安全、个人防护等专业知识</p>
+                        <a href="#safety" class="category-link">了解更多 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>环保知识</h3>
+                        <p>废物管理、排放控制、绿色化学、环保法规等可持续发展内容</p>
+                        <a href="#environment" class="category-link">了解更多 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-gavel"></i>
+                        </div>
+                        <h3>法规标准</h3>
+                        <p>GMP、EPA、OSHA等国际标准和要求，确保合规生产</p>
+                        <a href="#regulations" class="category-link">了解更多 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>案例研究</h3>
+                        <p>事故分析、最佳实践、技术评估等实际应用案例</p>
+                        <a href="#case-studies" class="category-link">了解更多 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 最新内容 -->
+        <section class="latest-content">
+            <div class="container">
+                <h2 class="section-title">最新内容</h2>
+                <div class="content-grid">
+                    <article class="content-card">
+                        <div class="content-meta">
+                            <span class="content-category">安全知识</span>
+                            <span class="content-date">2024-01-15</span>
+                        </div>
+                        <h3 class="content-title">制药工艺安全风险评估方法</h3>
+                        <p class="content-excerpt">详细介绍HAZOP、FMEA等风险评估方法在制药工艺中的应用...</p>
+                        <a href="content/safety/process-safety.html" class="content-link">阅读全文</a>
+                    </article>
+                    <article class="content-card">
+                        <div class="content-meta">
+                            <span class="content-category">环保知识</span>
+                            <span class="content-date">2024-01-12</span>
+                        </div>
+                        <h3 class="content-title">制药废水处理技术进展</h3>
+                        <p class="content-excerpt">探讨生物处理、膜分离等先进技术在制药废水处理中的应用...</p>
+                        <a href="content/environment/waste-management.html" class="content-link">阅读全文</a>
+                    </article>
+                    <article class="content-card">
+                        <div class="content-meta">
+                            <span class="content-category">法规标准</span>
+                            <span class="content-date">2024-01-10</span>
+                        </div>
+                        <h3 class="content-title">新版GMP附录解读</h3>
+                        <p class="content-excerpt">分析新版GMP附录的主要变化和对制药企业的影响...</p>
+                        <a href="content/regulations/gmp-requirements.html" class="content-link">阅读全文</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 统计数据 -->
+        <section class="statistics">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">专业知识条目</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">法规标准</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">案例研究</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">专业用户</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>制药安全知识库</h3>
+                    <p>专业的制药过程安全与环保知识分享平台</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="#safety">安全知识</a></li>
+                        <li><a href="#environment">环保知识</a></li>
+                        <li><a href="#regulations">法规标准</a></li>
+                        <li><a href="#case-studies">案例研究</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>学习资源</h4>
+                    <ul class="footer-links">
+                        <li><a href="content/resources/glossary.html">术语表</a></li>
+                        <li><a href="content/resources/references.html">参考文献</a></li>
+                        <li><a href="content/resources/tools-calculators.html">实用工具</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <p>如有问题或建议，欢迎联系我们</p>
+                    <p>邮箱: contact@pharma-safety.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 制药安全知识库. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/search.js"></script>
+</body>
+</html>
